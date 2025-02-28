@@ -18,6 +18,10 @@ import "./utils/PayableVault.sol";
 contract NativeVault is PayableVault, ReentrancyGuardTransient {
     address public immutable WRAPPED_TOKEN;
 
+    /// @dev keccak256(toUtf8Bytes("native"))
+    bytes32 private constant NATIVE =
+        0xbefae8b7ff926e5ec4428d291aa6cb21f134a3e9f02ace30ff61c382a104c57f;
+
     constructor(
         address pAddress,
         address tokenAddress
@@ -39,6 +43,7 @@ contract NativeVault is PayableVault, ReentrancyGuardTransient {
     ) external payable override(PayableVault) {
         /// Validate the following:
         /// - `fromUserAddress` and `msg.sender` to ensure the trade is deposited by the correct caller.
+        /// - Ensure `fromTokenId = toUtf8Bytes("native")`
         /// - Ensure the trade has not exceeded the `timeout`.
         /// - Ensure three following constraints:
         ///     - `amount` should not be 0
@@ -49,7 +54,11 @@ contract NativeVault is PayableVault, ReentrancyGuardTransient {
         address fromUserAddress = address(
             bytes20(input.tradeInfo.fromChain[0])
         );
+        if (input.tradeInfo.fromChain[0].length != 20)
+            revert InvalidAddressLength();
         if (fromUserAddress != msg.sender) revert Unauthorized();
+        if (keccak256(input.tradeInfo.fromChain[2]) != NATIVE)
+            revert InvalidDepositToken();
         if (block.timestamp > data.timeout) revert InvalidTimeout();
         if (
             data.amount == 0 ||

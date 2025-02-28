@@ -1412,9 +1412,9 @@ describe("NativeVault Contract Testing", () => {
       );
 
       //  Prepare mpcSignature
-      const pFeeAmount = ((tradeInfo[0].amountIn as bigint) * pFeeRate) / DENOM;
+      const pFeeAmount = ((tradeInfo[1].amountIn as bigint) * pFeeRate) / DENOM;
       const aFeeAmount =
-        (BigInt(affiliate[0].aggregatedValue) * BigInt(tradeInfo[0].amountIn)) /
+        (BigInt(affiliate[1].aggregatedValue) * BigInt(tradeInfo[1].amountIn)) /
         DENOM;
       const totalFee = pFeeAmount + aFeeAmount;
       const mpcSignature = await getSettlementSignature(

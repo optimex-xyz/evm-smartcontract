@@ -32,7 +32,7 @@ export function getTradeInfo(
     toChain: [
       hexlify(toUserAddress), // toUserAddress
       toUtf8Bytes(toChain), // toChain (must register in Management)
-      toUtf8Bytes(toToken), // toToken (must register in Management)
+      toToken === "native" ? toUtf8Bytes(toToken) : hexlify(toToken), //  toToken (must register in Management)
     ],
   };
 

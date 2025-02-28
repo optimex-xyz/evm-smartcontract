@@ -11,6 +11,8 @@ error InvalidMPCSign();
 /// Parameters Errors
 error AddressZero();
 error InvalidDepositAmount();
+error InvalidDepositToken();
+error InvalidAddressLength();
 error NativeCoinNotMatched();
 error InvalidTimeout();
 error InvalidPaymentAmount();

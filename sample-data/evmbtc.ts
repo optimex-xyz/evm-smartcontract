@@ -28,7 +28,7 @@ export function getTradeInfo(
     fromChain: [
       hexlify(fromUserAddress), // fromUserAddress
       toUtf8Bytes(fromChain), // fromChain (must register in Management)
-      toUtf8Bytes(fromToken), // fromToken (must register in Management)
+      fromToken === "native" ? toUtf8Bytes(fromToken) : hexlify(fromToken), // fromToken (must register in Management)
     ],
     toChain: [
       toUtf8Bytes("tb1q85w8v43nj5gq2elmc57fj0jrk8q900sk3udj8h"), //  toUserAddress

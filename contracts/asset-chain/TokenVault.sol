@@ -42,6 +42,7 @@ contract TokenVault is NonpayableVault, ReentrancyGuardTransient {
     ) external override(NonpayableVault) {
         /// Validate the following:
         /// - `fromUserAddress` and `msg.sender` to ensure the trade is deposited by the correct caller.
+        /// - Ensure `fromTokenId` and `LOCKING_TOKEN` are matched.
         /// - Ensure the trade has not exceeded the `timeout`.
         /// - Ensure two following constraints:
         ///     - `amount` should not be 0
@@ -50,7 +51,13 @@ contract TokenVault is NonpayableVault, ReentrancyGuardTransient {
         address fromUserAddress = address(
             bytes20(input.tradeInfo.fromChain[0])
         );
+        address token = address(bytes20(input.tradeInfo.fromChain[2]));
+        if (
+            input.tradeInfo.fromChain[0].length != 20 ||
+            input.tradeInfo.fromChain[2].length != 20
+        ) revert InvalidAddressLength();
         if (fromUserAddress != msg.sender) revert Unauthorized();
+        if (token != LOCKING_TOKEN) revert InvalidDepositToken();
         if (block.timestamp > data.timeout) revert InvalidTimeout();
         if (data.amount == 0 || data.amount != input.tradeInfo.amountIn)
             revert InvalidDepositAmount();

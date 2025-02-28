@@ -54,7 +54,7 @@ interface ITypes {
     /// - BTC -> EVM: ["utxoAddress", "depositTxId", "ephemeralAssetPubkey", "mpcAssetPubkey", "refundPubkey"]
     /// - BTC -> SOL: ["utxoAddress", "depositTxId", "ephemeralAssetPubkey", "mpcAssetPubkey", "refundPubkey"]
     /// - EVM -> BTC: ["vaultAddress", "depositTxId", "ephemeralAssetPubkey", "mpcAssetPubkey", "refundAddress"]
-    /// - SOL -> BTC: ["pdaPubkey", "depositTxId", "ephemeralAssetPubkey", "mpcAssetPubkey", "refundPubkey"]
+    /// - SOL -> BTC: ["vaultAta", "depositTxId", "ephemeralAssetPubkey", "mpcAssetPubkey", "refundPubkey"]
     struct ScriptInfo {
         bytes[5] depositInfo;
         address userEphemeralL2Address;
