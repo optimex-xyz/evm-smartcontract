@@ -8,9 +8,8 @@ import "./interfaces/ITypes.sol";
 import "./utils/Errors.sol";
 
 /**************************************************************************************
-                          =========== PetaFi ===========
     @title Management contract                               
-    @dev This contract functions as the mini-governance of the PetaFi Protocol.
+    @dev This contract functions as the mini-governance of the Protocol.
     - Manage the protocol's operational status.
     - Maintain the protocol's fee rate.
     - Maintain a list of authorized `Solver` addresses.
@@ -25,7 +24,7 @@ contract Management is Ownable, ITypes {
     /// Protocol fee rate in basis points (bps). Example: 50 bps = 50 / 10,000 = 0.5%.
     uint256 public pFeeRate;
 
-    /// Current operational state of the PetaFi Protocol
+    /// Current operational state of the Protocol
     Status public state;
 
     /// List of authorized `Solver` addresses
@@ -101,7 +100,7 @@ contract Management is Ownable, ITypes {
     /**
         @dev Event emitted when the Owner successfully adds a new authorized MPC's public keys.
         @param mpcL2Address The address derived from `mpcL2Pubkey`.
-        @param mpcL2Pubkey The MPC's pubkey for PetaFi L2 operations.
+        @param mpcL2Pubkey The MPC's pubkey for L2 Protocol operations.
         @param mpcAssetPubkey The MPC's pubkey for asset-chain operations.
         @param networkId The identifier of the network where the MPC is being updated.
         @dev Related function: setMPCInfo()
@@ -389,7 +388,7 @@ contract Management is Ownable, ITypes {
         - `mpcL2Address` The address derived from `mpcL2Pubkey`.
         - `expireTime` The timestamp until which the MPC's public keys are valid.
         - `mpcAssetPubkey` The public key used by MPC on the specified `networkId`.
-        - `mpcL2Pubkey` The public key used by MPC to authorize on the PetaFi Network.
+        - `mpcL2Pubkey` The public key used by MPC to authorize on the Protocol.
         @param prevExpireTime The new expiration time for the previous MPC's public keys.
     */
     function setMPCInfo(

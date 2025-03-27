@@ -4,7 +4,6 @@ pragma solidity ^0.8.20;
 import "./utils/Core.sol";
 
 /**************************************************************************************
-                          =========== PetaFi ===========
     @title BTCEVM contract                               
     @dev This contract facilitates trades and swaps from the Bitcoin network to 
         EVM-compatible networks.

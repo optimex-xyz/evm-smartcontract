@@ -5,7 +5,6 @@ import "./interfaces/IVaultRegistry.sol";
 import "./utils/Core.sol";
 
 /*****************************************************************************************
-                          =========== PetaFi ===========
     @title EVMBTC contract                               
     @dev This contract facilitates trades/swaps from the EVM-compatible networks to Bitcoin Network.
     - Tracks the current stage of each trade.

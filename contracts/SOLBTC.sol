@@ -4,7 +4,6 @@ pragma solidity ^0.8.20;
 import "./utils/Core.sol";
 
 /*****************************************************************************************
-                          =========== PetaFi ===========
     @title SOLBTC contract                               
     @dev This contract facilitates trades/swaps from the Solana Network to Bitcoin Network.
     - Tracks the current stage of each trade.

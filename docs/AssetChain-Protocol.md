@@ -1,6 +1,6 @@
 #### Overview
 
-The `Protocol` contract is a key component of the `PetaFi Protocol`, deployed across multiple asset-chains (e.g., Ethereum, Base, Optimism). This contract manages core functionalities specific to asset-chain operations, primarily overseeing the protocol fee receiver's address and providing owner-level privileges for updating critical settings. It utilizes OpenZeppelin’s Ownable module to restrict access to certain functions, ensuring only the owner can execute privileged actions.
+The `Protocol` contract is a key component of the `Optimex Protocol`, deployed across multiple asset-chains (e.g., Ethereum, Base, Optimism). This contract manages core functionalities specific to asset-chain operations, primarily overseeing the protocol fee receiver's address and providing owner-level privileges for updating critical settings. It utilizes OpenZeppelin’s Ownable module to restrict access to certain functions, ensuring only the owner can execute privileged actions.
 
 #### Key Components and Descriptions
 

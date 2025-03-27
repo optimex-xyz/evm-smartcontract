@@ -29,8 +29,8 @@ const config: HardhatUserConfig = {
       timeout: 900000,
       chainId: 11155111,
     },
-    petafi_test: {
-      url: process.env.PETAFI_TESTNET || "",
+    testnet: {
+      url: process.env.TESTNET || "",
       accounts:
         process.env.TESTNET_DEPLOYER !== undefined
           ? [process.env.TESTNET_DEPLOYER]
@@ -75,7 +75,7 @@ const config: HardhatUserConfig = {
     apiKey: "empty",
     customChains: [
       {
-        network: "petafi_test",
+        network: "testnet",
         chainId: 258386,
         urls: {
           apiURL: "https://explorer-bitfi-p00c4t1rul.t.conduit.xyz/api",

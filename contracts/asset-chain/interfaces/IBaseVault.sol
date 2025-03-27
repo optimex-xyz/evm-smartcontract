@@ -6,7 +6,7 @@ import "../../interfaces/ITypes.sol";
 interface IBaseVault {
     struct TradeDetail {
         uint256 amount;
-        uint64 timeout; //  a.k.a `scriptTimeout` in the PetaFi Protocol
+        uint64 timeout; //  a.k.a `scriptTimeout` in the Protocol
         address mpc;
         address ephemeralAssetAddress; //  address derived from `ephemeralAssetPubkey`
         address refundAddress;
@@ -23,7 +23,7 @@ interface IBaseVault {
         @param tradeId The unique identifier of the trade.
         @param depositor The address of the entity depositing the funds.
         @param token The address of the token being deposited.
-        @param ephemeralL2Address The address used to sign `rfqInfo` in the PetaFi Protocol.
+        @param ephemeralL2Address The address used to sign `rfqInfo` in the Protocol.
         @param detail A struct containing the trade details.
         @dev Related function: `deposit()`.
     */

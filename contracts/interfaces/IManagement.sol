@@ -21,7 +21,7 @@ interface IManagement {
     function pFeeRate() external view returns (uint256);
 
     /**
-        @notice Returns the current status of the PetaFi Protocol.
+        @notice Returns the current status of the Protocol.
         @return The current state of the protocol as a uint256.
     */
     function state() external view returns (uint256);

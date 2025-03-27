@@ -1,6 +1,6 @@
 #### Overview
 
-The `Payment` contract is a crucial component in the `PetaFi Protocol` ecosystem, responsible for handling the PMM's payments across different smart-contract enabled asset-chains. It serves two purposes, namely facilitating secure payment made by PMM to the user, and collecting total charged fee incurred in the trade.
+The `Payment` contract is a crucial component in the `Optimex Protocol` ecosystem, responsible for handling the PMM's payments across different smart-contract enabled asset-chains. It serves two purposes, namely facilitating secure payment made by PMM to the user, and collecting total charged fee incurred in the trade.
 The contract references the `Protocol` contract to access protocol-level configurations, such as the protocol fee receiver address.
 Additionally, it uses `SafeERC20` to handle token transfers safely, preventing transfer failures.
 
@@ -54,7 +54,7 @@ Additionally, it uses `SafeERC20` to handle token transfers safely, preventing t
      - Caller can be any address.
      - For native coin payments, `msg.value` must equal the `amount`.
      - The `toUser` address must not be a zero address.
-     - The `totalFee` must match the value specified by the PetaFi Protocol for the trade. The `MPC` will verify the payment transaction before providing a payment confirmation on L2, which triggers the release of funds on the destination chain. **Dishonest behavior by the PMM will result in the loss of payment**.
+     - The `totalFee` must match the value specified by the Optimex Protocol for the trade. The `MPC` will verify the payment transaction before providing a payment confirmation on L2, which triggers the release of funds on the destination chain. **Dishonest behavior by the PMM will result in the loss of payment**.
    - Events: Emits `PaymentTransferred` event.
 
 3. `function protocol()`

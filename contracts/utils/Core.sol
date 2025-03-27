@@ -8,10 +8,9 @@ import "../interfaces/IRouter.sol";
 import "./Errors.sol";
 
 /*****************************************************************************************
-                          =========== PetaFi ===========
     @title Core contract (Abstract)                             
     @dev This contract defines the fundamental interfaces for the Core Handler contracts 
-        used in the PetaFi Protocol. Core handlers facilitate the exchange of assets across
+        used in the Protocol. Core handlers facilitate the exchange of assets across
         multiple networks and are responsible for handling various trade operations,
         including deposits, payments, and settlement confirmations
     @dev The following Core Handler contracts are supported:

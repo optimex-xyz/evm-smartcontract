@@ -1,6 +1,6 @@
 #### Overview
 
-The `VaultRegistry` contract is a utility component of the `PetaFi Protocol` designed to manage and validate `Vault` addresses across various asset chains. It enables users to retrieve locking `Vault` addresses using a combination of `networkId` and `tokenId`.
+The `VaultRegistry` contract is a utility component of the `Optimex Protocol` designed to manage and validate `Vault` addresses across various asset chains. It enables users to retrieve locking `Vault` addresses using a combination of `networkId` and `tokenId`.
 
 #### Key Components and Descriptions
 

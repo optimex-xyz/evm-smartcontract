@@ -6,9 +6,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "./utils/AssetChainErrors.sol";
 
 /******************************************************************************************
-                              =========== PetaFi ===========
     @title Protocol contract                            
-    @dev This contract is used as the PetaFi Protocol Contract across various asset chains.
+    @dev This contract is used as the Protocol Contract across various asset chains.
     - Manages the Owner, who has special privileges to upgrade settings.
     - Manages the Protocol Fee Receiver.
 *******************************************************************************************/

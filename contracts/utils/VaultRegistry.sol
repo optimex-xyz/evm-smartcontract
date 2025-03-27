@@ -5,9 +5,8 @@ import "../interfaces/IManagement.sol";
 import "./Errors.sol";
 
 /***********************************************************************************************************
-                          =========== PetaFi ===========
     @title VaultRegistry contract                               
-    @dev This contract functions as the helper contract within the PetaFi Protocol.
+    @dev This contract functions as the helper contract within the Protocol.
     - Supports to register the locking Vaults on EVM compatible asset-chains.
     - Validate whether `Vault` address, specified in the `tradeId`, is valid.
 ************************************************************************************************************/

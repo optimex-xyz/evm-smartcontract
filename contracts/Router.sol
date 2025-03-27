@@ -6,13 +6,12 @@ import "./interfaces/ICore.sol";
 import "./utils/Errors.sol";
 
 /***********************************************************************************************************
-                                        =========== PetaFi ===========
     @title Router contract                               
-    @dev This contract functions as the helper contract within the PetaFi Protocol.
+    @dev This contract functions as the helper contract within the Protocol.
     - Manages routes between chains (e.g., "fromChain" -> "toChain").
     - Facilitates multiple actor types (`Solver`, `PMM`, `MPC`) in sending requests to the appropriate handler contract.
     - Enables fetching of `tradeId` data from the correct handler contract.
-    - Supports fetching PetaFi Protocol's settings.
+    - Supports fetching Protocol's settings.
 ************************************************************************************************************/
 
 contract Router is ITypes {
@@ -302,7 +301,7 @@ contract Router is ITypes {
     }
 
     /**
-        @notice Retrieves the current state of the PetaFi Protocol.
+        @notice Retrieves the current state of the Protocol.
         @return The state of the protocol as a `uint256`:
             - 0: OPERATING
             - 1: SUSPENDED

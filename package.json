@@ -9,7 +9,7 @@
     "eth_main": "hardhat run --network eth_main",
     "eth_test": "hardhat run --network eth_test",
     "base_test": "hardhat run --network base_test",
-    "petafi_test": "hardhat run --network petafi_test"
+    "testnet": "hardhat run --network testnet"
   },
   "devDependencies": {
     "@bitcoinerlab/secp256k1": "^1.1.1",

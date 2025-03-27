@@ -5,9 +5,8 @@ import "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
 /***********************************************************************************************************
-                          =========== PetaFi ===========
     @title Signer contract                               
-    @dev This contract functions as the helper contract within the PetaFi Protocol.
+    @dev This contract functions as the helper contract within the Protocol.
     - Recovers the `signer` of each signature based on its type.
 ************************************************************************************************************/
 
@@ -82,7 +81,7 @@ contract Signer is EIP712 {
     bytes32 private constant _SETTLEMENT_CONFIRMATION =
         0x6372c563a871900a9e4754f2f2eb0b45457c6aedaad14fda8e2327cbcf67829a;
 
-    constructor() EIP712("PetaFi", "Version 1") {}
+    constructor() EIP712("Protocol Signer", "Version 1") {}
 
     /**
         @notice Recovers the signer of the deposit confirmation signature

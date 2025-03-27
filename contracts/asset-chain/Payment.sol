@@ -9,9 +9,8 @@ import "./interfaces/IProtocol.sol";
 import "./utils/AssetChainErrors.sol";
 
 /******************************************************************************************
-                                =========== PetaFi ===========
     @title Payment contract                            
-    @dev This contract is used as the PetaFi Payment Contract across various asset chains.
+    @dev This contract is used as the Payment Contract across various asset chains.
     - Supports PMM in settling payments to users.
     - Splits the payment into two destinations:
         - To the user.

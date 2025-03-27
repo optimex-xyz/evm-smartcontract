@@ -7,7 +7,6 @@ import "./BaseVault.sol";
 import "../interfaces/INonpayableVault.sol";
 
 /*************************************************************************************************
-                                  =========== PetaFi ===========
     @title NonpayableVault contract (Abstract)                      
     @dev This contract defines fundamental interfaces for TokenVault contracts.
     Handles the necessary logic for: 
@@ -26,7 +25,7 @@ abstract contract NonpayableVault is BaseVault, INonpayableVault {
     /**
         @notice Deposits the specified `amount` (ERC-20 tokens only) 
             to initialize the `tradeId` and lock the funds.
-        @param ephemeralL2Address The address, derived from `ephemeralL2Key`, used for validation in the PetaFi Protocol.
+        @param ephemeralL2Address The address, derived from `ephemeralL2Key`, used for validation in the Protocol.
         @param input The `TradeInput` object containing trade-related information.
         @param data The `TradeDetail` object containing trade details for finalization on the asset chain.
     */

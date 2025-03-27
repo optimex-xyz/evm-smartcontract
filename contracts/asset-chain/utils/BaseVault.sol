@@ -11,7 +11,6 @@ import "../interfaces/IProtocol.sol";
 import "../utils/AssetChainErrors.sol";
 
 /*************************************************************************************************
-                                  =========== PetaFi ===========
     @title BaseVault contract (Abstract)                       
     @dev This contract defines fundamental interfaces for Vault contracts.
     Provides the base necessary logic for: 

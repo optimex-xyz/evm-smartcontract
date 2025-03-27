@@ -1,6 +1,6 @@
 #### Overview
 
-The `Router` contract serves as the central trade management component within the `PetaFi Protocol`, enabling cross-chain operations by coordinating between `Core Handler` contracts that handle specific trade routes. It provides dynamic routing capabilities and a framework for maintaining and updating `Core` contract versions, ensuring trades are directed through the correct pathway based on the source and destination blockchain networks (`fromChain` and `toChain`). The `Router` interacts with the `Management` contract for validation of supported networks and permission checks, and it stores and emits trade-related data and events to support a cohesive trade lifecycle management system.
+The `Router` contract serves as the central trade management component within the `Optimex Protocol`, enabling cross-chain operations by coordinating between `Core Handler` contracts that handle specific trade routes. It provides dynamic routing capabilities and a framework for maintaining and updating `Core` contract versions, ensuring trades are directed through the correct pathway based on the source and destination blockchain networks (`fromChain` and `toChain`). The `Router` interacts with the `Management` contract for validation of supported networks and permission checks, and it stores and emits trade-related data and events to support a cohesive trade lifecycle management system.
 
 #### Key Components and Descriptions
 
@@ -520,10 +520,10 @@ The `Router` contract serves as the central trade management component within th
     - Requirements: Caller can be `ANY`.
     - Events: `None`
     - Returns: A structured data object (`MPCInfo`) containing:
-      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
       - `expireTime`: The timestamp after which the MPC public keys become inactive.
       - `mpcAssetPubkey`: The public key used to identify the `MPC` entity in operations on asset chains.
-      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
     - Note:
       - During a transition phase, the former MPC public key is assigned an `expireTime`.
       - This means that during this period, both the current active key and the previous key (if not yet expired) may be available.
@@ -541,10 +541,10 @@ The `Router` contract serves as the central trade management component within th
     - Requirements: Caller can be `ANY`.
     - Events: `None`
     - Returns: A structured data object (`MPCInfo`) containing:
-      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
       - `expireTime`: The timestamp after which the MPC public keys become inactive.
       - `mpcAssetPubkey`: The public key used to identify the `MPC` entity in operations on asset chains.
-      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
 
 37. `function numOfSupportedTokens()`
 

@@ -1,26 +1,26 @@
-### PetaFi Protocol Overview (SMC)
+### Optimex Protocol Overview (SMC)
 
-The `PetaFi Protocol` is a robust framework designed to facilitate cross-chain transactions and interactions in a decentralized finance (`DeFi`) environment. It utilizes a series of smart contracts deployed across different networks to ensure secure, efficient, and scalable operations. The protocol comprises several key components, deployed in both a private L2 network and across asset-chains (i.e. Ethereum, Base)
+The `Optimex Protocol` is a robust framework designed to facilitate cross-chain transactions and interactions in a decentralized finance (`DeFi`) environment. It utilizes a series of smart contracts deployed across different networks to ensure secure, efficient, and scalable operations. The protocol comprises several key components, deployed in both a private L2 network and across asset-chains (i.e. Ethereum, Base)
 
 <p align="center">
-  <img src="./images/PetaFi.png" alt="PetaFi Smart Contracts" width="950px" height="300px"/>
+  <img src="./images/Optimex.png" alt="Optimex Smart Contracts" width="950px" height="300px"/>
 </p>
 
 All of the following contracts are designed to be replaceable (compose/decompose).
 
 #### Protocol Features
 
-1.  Cross-Chain Compatibility: The `PetaFi Protocol` is designed to operate seamlessly across multiple networks, including Ethereum and Base, enabling a diverse range of asset interactions.
+1.  Cross-Chain Compatibility: The `Optimex Protocol` is designed to operate seamlessly across multiple networks, including Ethereum and Base, enabling a diverse range of asset interactions.
 
 2.  Scalability: Utilizing a private L2 network enhances the protocol's scalability, allowing for higher transaction throughput and lower fees.
 
 3.  Security: The use of established cryptographic methods and smart contract patterns enhances the security of user transactions and protocol operations.
 
-#### PetaFi Protocol (L2)
+#### Optimex Protocol (L2)
 
 ###### `Management` contract
 
-This contract functions as the mini-governance system of the PetaFi Protocol.
+This contract functions as the mini-governance system of the Optimex Protocol.
 
 - Manages the Protocol Fee Rate (`pFeeRate`)
 - Manage a list of authorized `Solver`.
@@ -47,7 +47,7 @@ This contract functions as the mini-governance system of the PetaFi Protocol.
 - Manages the list of supported PMMs and their associated accounts.
   - Each PMM can have one or more associated accounts.
   - The L2 contract uses these addresses to validate PMM signatures.
-- Manages the PetaFi Protocol status:
+- Manages the Optimex Protocol status:
   - `Operation`: protocol fully operational.
   - `Suspend`: protocol is in suspension mode.
     - `submitTrade`, `confirmDeposit`, and `selectPMM` are suspended.
@@ -152,13 +152,13 @@ Also provide query interfaces:
 
 ###### `VaultRegistry` contract:
 
-The `VaultRegistry` contract functions as a `Helper` within the `PetaFi Protocol` to validate and manage `vaultAddress` entries across various asset chains. It plays a key role in ensuring that `Vault` contracts are accurately registered and updated for specific tokens.
+The `VaultRegistry` contract functions as a `Helper` within the `Optimex Protocol` to validate and manage `vaultAddress` entries across various asset chains. It plays a key role in ensuring that `Vault` contracts are accurately registered and updated for specific tokens.
 
 - Purpose:
   - Validates the `vaultAddress` for tokens on asset chains.
   - Allows for administrative updates of `Vault` contracts to maintain an accurate registry.
 - Administrative Functionality: `setVault(address vault, bytes networkId, bytes tokenId)`
-  - This function enables the PetaFi Protocol's Admin to:
+  - This function enables the Optimex Protocol's Admin to:
     - Register or update the deployed `Vault` for a specific token.
     - Associate the `vaultAddress` with its corresponding `networkId` and `tokenId`.
   - Ensures that each asset chain's locking mechanism for a token is properly managed.
@@ -179,14 +179,14 @@ This is a `Helper` contract that assists in retrieving the `Signer` for each sig
 
 ###### `Protocol` contract:
 
-This contract is used as the PetaFi Protocol Contract across various asset chains.
+This contract is used as the Optimex Protocol Contract across various asset chains.
 
 - Manages the Owner, who has special privileges to upgrade settings.
 - Manages the Protocol Fee Receiver.
 
 ###### `Payment` contract:
 
-This contract is used as the PetaFi Protocol Contract across various asset chains.
+This contract is used as the Optimex Protocol Contract across various asset chains.
 
 - Supports PMM in settling payments to users.
 - Splits the payment into two destinations:
@@ -195,7 +195,7 @@ This contract is used as the PetaFi Protocol Contract across various asset chain
 
 ###### `NativeVault` and `TokenVault` contracts:
 
-These contracts are used as the PetaFi Contract across various asset chains.
+These contracts are used as the Optimex Contract across various asset chains.
 
 - Handles the necessary logic for depositing funds, settling payments, and issuing refunds.
 - `NativeVault` contract:

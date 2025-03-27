@@ -1,6 +1,6 @@
 #### Overview
 
-The `Management` contract is part of the `PetaFi Protocol`, designed to manage the protocol’s operational status, control access permissions, and handle authorized entities. This includes setting and updating the status of the protocol, managing authorized accounts (`Solvers`, `PMMs`, and `MPC Nodes`), and handling supported tokens and networks. The contract uses an owner-based access control (via `Ownable`) to ensure only authorized users can modify critical settings.
+The `Management` contract is part of the `Optimex Protocol`, designed to manage the protocol’s operational status, control access permissions, and handle authorized entities. This includes setting and updating the status of the protocol, managing authorized accounts (`Solvers`, `PMMs`, and `MPC Nodes`), and handling supported tokens and networks. The contract uses an owner-based access control (via `Ownable`) to ensure only authorized users can modify critical settings.
 
 #### Key Components and Descriptions
 
@@ -104,10 +104,10 @@ The `Management` contract is part of the `PetaFi Protocol`, designed to manage t
        - Type: `bytes`.
      - `info`:
        - Description: A structured data object (`MPCInfo`) containing:
-         - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+         - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
          - `expireTime`: The timestamp after which the MPC public keys become inactive.
          - `mpcAssetPubkey`: The public key used to identify the `MPC` entity in operations on asset chains.
-         - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+         - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
        - Type: `MPCInfo` struct.
      - `prevExpireTime`:
        - Description: The expiration timestamp assigned to the former MPC public keys.
@@ -329,10 +329,10 @@ The `Management` contract is part of the `PetaFi Protocol`, designed to manage t
     - Requirements: Caller can be `ANY`.
     - Events: `None`
     - Returns: A structured data object (`MPCInfo`) containing:
-      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
       - `expireTime`: The timestamp after which the MPC public keys become inactive.
       - `mpcAssetPubkey`: The public key used to identify the `MPC` entity in operations on asset chains.
-      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
     - Note:
       - During a transition phase, the former MPC public key is assigned an `expireTime`.
       - This means that during this period, both the current active key and the previous key (if not yet expired) may be available.
@@ -350,10 +350,10 @@ The `Management` contract is part of the `PetaFi Protocol`, designed to manage t
     - Requirements: Caller can be `ANY`.
     - Events: `None`
     - Returns: A structured data object (`MPCInfo`) containing:
-      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Address`: An address derived from `mpcL2Pubkey`, used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
       - `expireTime`: The timestamp after which the MPC public keys become inactive.
       - `mpcAssetPubkey`: The public key used to identify the `MPC` entity in operations on asset chains.
-      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the PetaFi Protocol (L2).
+      - `mpcL2Pubkey`: The public key used to identify the `MPC` entity in operations on the Optimex Protocol (L2).
 
 25. `function isValidPMM(bytes32 pmmId)`
 

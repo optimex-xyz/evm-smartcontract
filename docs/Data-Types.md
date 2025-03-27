@@ -1,6 +1,6 @@
-### PetaFi Protocol Data Types (SMC)
+### Optimex Protocol Data Types (SMC)
 
-This section covers essential data types within the `PetaFi Protocol` that enable efficient and secure handling of cross-chain trades. It defines the various token structures, encoding methods, and data structuring conventions used within the protocol. Each data type is carefully crafted to support seamless interoperability between `Bitcoin`, `Ethereum-based networks` and `Solana`, ensuring that token information, address encoding, and structured trade data maintain compatibility across chains.
+This section covers essential data types within the `Optimex Protocol` that enable efficient and secure handling of cross-chain trades. It defines the various token structures, encoding methods, and data structuring conventions used within the protocol. Each data type is carefully crafted to support seamless interoperability between `Bitcoin`, `Ethereum-based networks` and `Solana`, ensuring that token information, address encoding, and structured trade data maintain compatibility across chains.
 
 #### Token Info Documentation
 
@@ -399,7 +399,7 @@ enum Status {
   - `suspend()`, `shutdown()`, `resume()`
   - `isSuspended()`
 - Related contracts: `Management` contract.
-- Descriptions: The `Status` enum defines the operational states of the `PetaFi protocol`, providing a mechanism to control the availability and functionality of the system. Each state represents a specific operational mode that dictates the behavior of the protocol and its components.
+- Descriptions: The `Status` enum defines the operational states of the `Optimex protocol`, providing a mechanism to control the availability and functionality of the system. Each state represents a specific operational mode that dictates the behavior of the protocol and its components.
 
 3. Structs: `TradeData`, `TradeInfo`, and `ScriptInfo`
 
@@ -677,13 +677,13 @@ struct MPCInfo {
 - Related contracts: `Management` contracts.
 - Descriptions:
   - `mpcL2Address`:
-    - The address derived from mpcL2Pubkey, serving as the identifier for the `MPC` entity in the PetaFi protocol (L2).
+    - The address derived from mpcL2Pubkey, serving as the identifier for the `MPC` entity in the Optimex protocol (L2).
     - Type: `address`
   - `expireTime`:
     - The expiration timestamp for the `mpcL2Pubkey` and `mpcAssetPubkey`, associated with the `mpcL2Address` address.
     - Type: `uint64`
   - `mpcL2Pubkey`:
-    - The public key of the `MPC` entity used for operations within the PetaFi protocol (L2).
+    - The public key of the `MPC` entity used for operations within the Optimex protocol (L2).
     - Type: `bytes`
   - `mpcAssetPubkey`:
     - The public key of the `MPC` entity used for operations on the asset chain.

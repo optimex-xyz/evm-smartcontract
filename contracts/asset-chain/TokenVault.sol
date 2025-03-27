@@ -6,9 +6,8 @@ import "@openzeppelin/contracts/utils/ReentrancyGuardTransient.sol";
 import "./utils/NonpayableVault.sol";
 
 /*************************************************************************************************
-                                  =========== PetaFi ===========
     @title TokenVault contract                            
-    @dev This contract is used as the PetaFi Vault Contract across various asset chains.
+    @dev This contract is used as the Vault Contract across various asset chains.
     Handles the necessary logic for: 
         - Depositing and locking funds (ERC-20 Token Only)
         - Settling payments
@@ -31,7 +30,7 @@ contract TokenVault is NonpayableVault, ReentrancyGuardTransient {
     /**
         @notice Deposits the specified `amount` (ERC-20 tokens only) 
             to initialize the `tradeId` and lock the funds.
-        @param ephemeralL2Address The address, derived from `ephemeralL2Key`, used for validation in the PetaFi Protocol.
+        @param ephemeralL2Address The address, derived from `ephemeralL2Key`, used for validation in the Protocol.
         @param input The `TradeInput` object containing trade-related information.
         @param data The `TradeDetail` object containing trade details for finalization on the asset chain.
     */
@@ -112,7 +111,7 @@ contract TokenVault is NonpayableVault, ReentrancyGuardTransient {
         /// @dev:
         /// - Not checking `protocolFee` due to reasons:
         ///     - `protocolFee` is submitted by MPC
-        ///     - MPC's also required to submit settlement confirmation in the PetaFi Protocol
+        ///     - MPC's also required to submit settlement confirmation in the Protocol
         /// - Ensure a hash of trade detail matches the one recorded when deposit
         /// - MPC allowed to transfer when `timestamp <= timeout`
         if (_tradeHashes[tradeId] != _getTradeHash(detail))

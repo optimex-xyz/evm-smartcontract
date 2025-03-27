@@ -1,6 +1,6 @@
 #### Overview
 
-The `Signer` contract functions as a helper within the `PetaFi Protocol`, providing utilities for recovering the address of the signer based on distinct message types. Each function is designed to validate and recover signatures for specific transaction actions, ensuring protocol integrity.
+The `Signer` contract functions as a helper within the `Optimex Protocol`, providing utilities for recovering the address of the signer based on distinct message types. Each function is designed to validate and recover signatures for specific transaction actions, ensuring protocol integrity.
 
 #### Key Components and Descriptions
 

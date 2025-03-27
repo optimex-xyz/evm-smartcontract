@@ -1,6 +1,6 @@
 #### Overview
 
-The `Vault` contracts, comprising `NativeVault` and `TokenVault`, are integral components of the `PetaFi Protocol`, providing secure custody and management of assets for trades conducted across multiple asset chains. These contracts enable the deposit of assets, settlement of trades through validated multi-signature processes, and refunding of unclaimed funds after a specified timeout. They ensure seamless functionality for both native coins and tokens, with clear separation of handling among locking tokens.
+The `Vault` contracts, comprising `NativeVault` and `TokenVault`, are integral components of the `Optimex Protocol`, providing secure custody and management of assets for trades conducted across multiple asset chains. These contracts enable the deposit of assets, settlement of trades through validated multi-signature processes, and refunding of unclaimed funds after a specified timeout. They ensure seamless functionality for both native coins and tokens, with clear separation of handling among locking tokens.
 
 #### Key Components and Descriptions
 
@@ -24,7 +24,7 @@ The `Vault` contracts, comprising `NativeVault` and `TokenVault`, are integral c
     - Purpose: Deposits the specified `amount` to initialize a `tradeId` and lock the funds.
     - Parameters:
       - `ephemeralL2Address`:
-        - Description: An address derived from the `ephemeralL2Key`, used to authorize updates within the `PetaFi Protocol`.
+        - Description: An address derived from the `ephemeralL2Key`, used to authorize updates within the `Optimex Protocol`.
         - Type: `uint256`
       - `input`:
         - Description: The data object containing trade-related information:
