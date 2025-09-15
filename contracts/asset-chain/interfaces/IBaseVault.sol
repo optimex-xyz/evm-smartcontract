@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.20;
 
-import "../../interfaces/ITypes.sol";
+import "./ITypes.sol";
 
 interface IBaseVault {
     struct TradeDetail {
